@@ -35,9 +35,9 @@ def save_json_file(path, data):
 
 # --- UI ---
 
-st.set_page_config(page_title="Dataset generator for single_agent.py (v2)", layout="wide")
-st.title("Single Agent — Data Generator UI (v2)")
-st.write("Use this form to create or append customer data used by `single_agent.py`. After saving, you can run the agent for the customer from the same UI. This version shows a clean dashboard with color-coded decision badges.")
+st.set_page_config(page_title="Loan approval checker", layout="wide")
+st.title("Loan approval checker")
+st.write("Use this form to create or append customer data. After saving, you can run the agent for the customer from the same UI.")
 
 col_left, col_right = st.columns(2)
 
@@ -236,4 +236,3 @@ with col_run:
                 st.markdown("---")
 
 st.markdown("---")
-st.caption("Note: This UI appends entries to the JSON files. If you prefer overwrite behavior, modify save logic in code.")
