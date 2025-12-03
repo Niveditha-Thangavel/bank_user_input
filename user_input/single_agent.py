@@ -4,6 +4,7 @@ import json
 import os
 import re
 from typing import Any
+import streamlit as st
 
 os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here" 
 #API_KEY = "AIzaSyCG3JZiOqvWYmLrGHC9RoSbdnN4OkJVUgo"
@@ -54,6 +55,7 @@ def create_agent(customer_id):
         ),
         tools=[fetch_tool()],
         allow_delegation=False,
+        verbose = True,
         llm=ollm
     )
     return single_agent
@@ -86,7 +88,7 @@ def create_task(customer_id):
         "Return exactly:\n"
         "{\n"
         "  \"decision\": \"APPROVE\" | \"REVIEW\" | \"REJECT\",\n"
-        "  \"reason\": \"<short human-readable reasonning or note 'All Passing'>\"\n"
+        "  \"reason\": \"<short human-readable reasonning on why review or rejection or note 'All Passing'>\"\n"
         "}\n\n"
         "MANDATES:\n"
         "- Use the fetch_tool to get the customer's data.\n"
@@ -157,10 +159,11 @@ def main(user_prompt):
         crew = Crew(
             agents=[agent],
             tasks=[task],
-            verbose=True
+            verbose=False
         )
 
         result = crew.kickoff()
-        print(result)
+        output = extract_result(result)
+        return output
 
-main("my id is C101")
+

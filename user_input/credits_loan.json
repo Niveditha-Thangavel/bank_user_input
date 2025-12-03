@@ -1,0 +1,160 @@
+{
+  "customer_accounts": [
+    {
+      "customer_id": "C101",
+      "account_creation_date": "2024-04-01",
+      "credit_cards": [
+        {
+          "card_number": "4111111111111111",
+          "credit_limit": 10000,
+          "current_balance": 3200,
+          "billing_cycles": [
+            {
+              "cycle_start": "2025-10-01",
+              "cycle_end": "2025-10-31",
+              "amount_due": 2000,
+              "amount_paid": 2000,
+              "payment_date": "2025-11-05"
+            },
+            {
+              "cycle_start": "2025-11-01",
+              "cycle_end": "2025-11-30",
+              "amount_due": 2500,
+              "amount_paid": 2400,
+              "payment_date": "2025-12-02"
+            }
+          ]
+        }
+      ],
+      "loans": [
+        {
+          "loan_id": "L101",
+          "loan_type": "personal",
+          "principal_amount": 5000,
+          "outstanding_amount": 2500,
+          "monthly_due": 500,
+          "last_payment_date": "2025-11-15"
+        }
+      ]
+    },
+    {
+      "customer_id": "C102",
+      "account_creation_date": "2025-07-01",
+      "credit_cards": [
+        {
+          "card_number": "4222222222222222",
+          "credit_limit": 40000,
+          "current_balance": 30000,
+          "billing_cycles": [
+            {
+              "cycle_start": "2025-10-01",
+              "cycle_end": "2025-10-31",
+              "amount_due": 15000,
+              "amount_paid": 12000,
+              "payment_date": "2025-11-05"
+            },
+            {
+              "cycle_start": "2025-11-01",
+              "cycle_end": "2025-11-30",
+              "amount_due": 20000,
+              "amount_paid": 15000,
+              "payment_date": "2025-12-03"
+            }
+          ]
+        }
+      ],
+      "loans": [
+        {
+          "loan_id": "L102",
+          "loan_type": "car",
+          "principal_amount": 200000,
+          "outstanding_amount": 180000,
+          "monthly_due": 15000,
+          "last_payment_date": "2025-11-20"
+        },
+        {
+          "loan_id": "L103",
+          "loan_type": "personal",
+          "principal_amount": 10000,
+          "outstanding_amount": 6000,
+          "monthly_due": 1000,
+          "last_payment_date": "2025-11-10"
+        }
+      ]
+    },
+    {
+      "customer_id": "C103",
+      "account_creation_date": "2024-04-01",
+      "credit_cards": [
+        {
+          "card_number": "4111111111111111",
+          "credit_limit": 10000.0,
+          "current_balance": 3200.0,
+          "billing_cycles": [
+            {
+              "cycle_start": "2025-10-01",
+              "cycle_end": "2025-10-31",
+              "amount_due": 2000.0,
+              "amount_paid": 2000.0,
+              "payment_date": "2025-11-05"
+            },
+            {
+              "cycle_start": "2025-11-01",
+              "cycle_end": "2025-11-30",
+              "amount_due": 2500.0,
+              "amount_paid": 2400.0,
+              "payment_date": "2025-12-02"
+            }
+          ]
+        }
+      ],
+      "loans": [
+        {
+          "loan_id": "L101",
+          "loan_type": "personal",
+          "principal_amount": 5000.0,
+          "outstanding_amount": 2500.0,
+          "monthly_due": 500.0,
+          "last_payment_date": "2025-11-15"
+        }
+      ]
+    },
+    {
+      "customer_id": "C104",
+      "account_creation_date": "2024-01-15",
+      "credit_cards": [
+        {
+          "card_number": "4333333333333333",
+          "credit_limit": 50000.0,
+          "current_balance": 12000.0,
+          "billing_cycles": [
+            {
+              "cycle_start": "2025-10-01",
+              "cycle_end": "2025-10-31",
+              "amount_due": 8000.0,
+              "amount_paid": 8000.0,
+              "payment_date": "2025-11-03"
+            },
+            {
+              "cycle_start": "2025-11-01",
+              "cycle_end": "2025-11-30",
+              "amount_due": 9000.0,
+              "amount_paid": 9000.0,
+              "payment_date": "2025-12-02"
+            }
+          ]
+        }
+      ],
+      "loans": [
+        {
+          "loan_id": "L104",
+          "loan_type": "personal",
+          "principal_amount": 10000.0,
+          "outstanding_amount": 2000.0,
+          "monthly_due": 500.0,
+          "last_payment_date": "2025-11-15"
+        }
+      ]
+    }
+  ]
+}
