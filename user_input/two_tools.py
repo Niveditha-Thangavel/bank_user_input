@@ -8,7 +8,7 @@ import streamlit as st
 
 os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here" 
 #API_KEY = "AIzaSyCG3JZiOqvWYmLrGHC9RoSbdnN4OkJVUgo"
-API_KEY = "AIzaSyBK6fYcnD_Za7WMQWa4qfWuPBkoL6G_QvU"
+API_KEY = "AIzaSyBVoM_S7jMuSje9GB0-Gz6-xMLWxTKt5QQ"
 ollm = LLM(model='gemini/gemini-2.5-flash', api_key=API_KEY)
 
 
@@ -53,10 +53,9 @@ DEFAULT_RULES_TEXT = (
     "9. Outlier Behavior Check: There must be no extreme or unexplained large transaction outliers\n"
     "10. Liquidity Buffer Check: Customer should maintain a reasonable financial buffer or savings room\n"
     "11. Credit History Strength: Customer must show reliable and stable historical credit behavior\n"
-    "12. Documentation & Identity Check: Customer must have complete and verifiable documentation & identity records\n\n"
     "Decision rule (exact mapping):\n"
-    "- If number_of_rules_satisfied == 12 -> decision = \"APPROVE\"\n"
-    "- If 8 <= number_of_rules_satisfied < 12 -> decision = \"REVIEW\"\n"
+    "- If number_of_rules_satisfied == 11 -> decision = \"APPROVE\"\n"
+    "- If 8 <= number_of_rules_satisfied < 1 -> decision = \"REVIEW\"\n"
     "- If number_of_rules_satisfied < 8 -> decision = \"REJECT\"\n\n"
     "OUTPUT REQUIREMENT: Return exactly the JSON object {\"decision\":\"APPROVE|REVIEW|REJECT\",\"reason\":\"string\"} and NOTHING else."
 )
@@ -89,7 +88,7 @@ def create_agent(customer_id: str, rules_text: str = None):
         ),
         tools=[data_fetcher, rules_provider],
         allow_delegation=False,
-        verbose=False,
+        verbose=True,
         llm=ollm
     )
     return single_agent
@@ -172,7 +171,7 @@ def main(user_prompt):
         crew = Crew(
             agents=[agent],
             tasks=[task],
-            verbose=False
+            verbose=True
         )
 
         result = crew.kickoff()
