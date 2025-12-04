@@ -7,8 +7,8 @@ from contextlib import redirect_stdout
 import streamlit as st
 
 # Import the existing single_agent.main (assumes single_agent.py is in same folder)
-import two_tools as sa
-#import single_agent as sa -> use this 
+# Import two_tools to use it
+import multi_agent_two_tools as sa
 
 BANK_FILE = "bank_statements.json"
 CREDIT_FILE = "credits_loan.json"
